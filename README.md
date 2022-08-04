@@ -184,6 +184,7 @@ transaction(traveller: String, destination: String, duration_in_daysy: int, budg
 }
 ```
 
+
  5.  
 ``` cadence
    import travel from 0x01
@@ -192,6 +193,9 @@ pub fun main(traveller: string): travel.traveller {
     return travel.traveldocs[travel]
 }
 ```
+## chapter 3 day 1 quest
 
+1. struct are differnt from resource because you can copy them, overwrite them, and create them whenever you want.
+2. 
 
 
