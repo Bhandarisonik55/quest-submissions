@@ -58,7 +58,7 @@ pub fun main(): String {
 
 
 4.    
-
+```cadence
 pub contract jacobtucker {
 
    //account templete//
@@ -93,18 +93,18 @@ pub contract jacobtucker {
     jacobtucker.updatemynumber(newnumber: mynewnumber)
   }
 }
-
+```
 
 
 ## chapter 2 day 3 quest
 
-1.
+1.```cadence
    pub fun main(): int{
     var S:[string]=["mom","dad","brother"]
     log(S)
     return 1
     }
-    
+    ```
 
 2.   
     pub fun main(){
