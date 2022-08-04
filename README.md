@@ -33,7 +33,7 @@ pub contract jacobtucker {
     init() {
         self.is = "the best!"
     }
-}
+}```
    
 
 2.     
@@ -184,7 +184,7 @@ transaction(traveller: String, destination: String, duration_in_daysy: int, budg
 pub fun main(traveller: string): travel.traveller {
     return travel.traveldocs[travel]
 }
-```
+
 
 
 
