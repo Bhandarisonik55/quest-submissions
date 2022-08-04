@@ -22,7 +22,7 @@ Here are some answers;
       
 2. Because it consist of all the requirements of a safe and trustworthy program as listed on the pillars.
 
-## chapter 2 day 1
+## chapter 2 day 1 quest
 
 1.   pub contract jacobtucker {
 
@@ -39,7 +39,7 @@ pub fun main(): String {
     return jacobtucker.is
 }
 
-## chapter 2 day 2
+## chapter 2 day 2 quest
 
 1.
    Because it’s making changes in the BlockChain, it has to be done in the transactions not in the scripts as the scripts are just meant for viewing the data.
@@ -90,7 +90,7 @@ pub fun main(): String {
 }
 
 
-## chapter 2 day 3
+## chapter 2 day 3 quest
 
 1.
    pub fun main(): int{
@@ -121,7 +121,7 @@ pub fun main(): String {
  We can fix it using the force-unwrap operator.
  
 
-## chapter 2 day 4
+## chapter 2 day 4 quest
 
 1,2 & 3:
                  pub contract travel {
