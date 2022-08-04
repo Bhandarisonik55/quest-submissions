@@ -36,7 +36,8 @@ pub contract jacobtucker {
 }
 ```
 
-2.     ```cadence
+2.     
+```cadence
 import jacobtucker from 0x03
 
 pub fun main(): String {
@@ -59,7 +60,7 @@ pub fun main(): String {
 
 
 4.    
-     ```cadence
+```cadence
 pub contract jacobtucker {
 
    //account templete//
@@ -94,7 +95,7 @@ pub contract jacobtucker {
     jacobtucker.updatemynumber(newnumber: mynewnumber)
   }
 }
-  ```
+```
 
 
 ## chapter 2 day 3 quest
@@ -106,24 +107,26 @@ pub contract jacobtucker {
     log(S)
     return 1
     }
-      ```
+```
 
-2.   ```cadence
+2.   
+```cadence
     pub fun main(){
      let S:{string:Uint64}={"facebook":1,"instagram":3,"youtube":2,"reddit":5,"linkedin":4}
      }
-       ```
+```
   
   
 
   3.   
      force unwrap operator (!) unwraps an optional type by saying :"if this nil,panic! if it's not nil we're fine, but get rid of optional type".
-       for example;   ```cadence
+       for example;   
+```cadence
                           Pub fun main(): String {
                           Let example: {Int: String} = {5: “bmw”, 20: “audi”, 30: “merceds"}
                           Return example[5]!   //The value “bmw” is no longer an optional type. It now becomes the type string and we won’t have any errors in compilation.
 }
- ```
+```
 
 4.
   We are getting the error because of a mismatch in the declared return type of the function and the returned type that is actually being returned. 
@@ -132,7 +135,8 @@ pub contract jacobtucker {
 
 ## chapter 2 day 4 quest
 
-1,2 & 3:      ``` cadence
+1,2 & 3:      
+``` cadence
                  pub contract travel {
 
    pub var traveldocs: {string: travelplan}
@@ -165,7 +169,8 @@ pub contract jacobtucker {
 ```
 
 
- 4.   ``` cadence
+ 4.   
+``` cadence
         import travel from 0x01
 
 transaction(traveller: String, destination: String, duration_in_daysy: int, budget: int) {
@@ -179,7 +184,8 @@ transaction(traveller: String, destination: String, duration_in_daysy: int, budg
 }
 ```
 
- 5.  ``` cadence
+ 5.  
+``` cadence
    import travel from 0x01
 
 pub fun main(traveller: string): travel.traveller {
