@@ -24,7 +24,9 @@ Here are some answers;
 
 ## chapter 2 day 1 quest
 
-1.   pub contract jacobtucker {
+1.  
+'''cadence
+pub contract jacobtucker {
 
     pub let is: String
 
@@ -32,6 +34,7 @@ Here are some answers;
         self.is = "the best!"
     }
 }
+   '''cadence
 
 2.     import jacobtucker from 0x03
 
