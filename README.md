@@ -40,11 +40,23 @@ pub fun main(): String {
 }
 
 ## chapter 2 day 2
-## chapter 2 day 4
+
+1.
+   Because it’s making changes in the BlockChain, it has to be done in the transactions not in the scripts as the scripts are just meant for viewing the data.
+   
+
+2.
+     AuthAccount is a type that allows us to access the data in the user’s account to sign the transaction and verify it.
+
+3.
+    Prepare phase is to access the information/data in the user's account whereas the execute phase can’t access the information in the user's account. The execute phase is where the actual modification on data takes place.  
+
+
+
 
 4.    pub contract jacobtucker {
 
-   //account templete
+   //account templete//
     pub let is: string
     pub var mynumber: int
 
@@ -58,14 +70,14 @@ pub fun main(): String {
     }
 }
 
-//Script template
+//Script template//
   import jacobtucker from 0x03
   
   pub fun main(): int{
       return jacobtucker.mynumber
   }
   
-  // transaction template
+  // transaction template//
   
   import jacobtucker from 0x03
   transaction(mynewnumber: int) {
@@ -79,6 +91,89 @@ pub fun main(): String {
 
 
 ## chapter 2 day 3
+
+1.
+   pub fun main(): int{
+    var S:[string]=["mom","dad","brother"]
+    log(S)
+    return 1
+    }
+    
+
+2.
+    pub fun main(){
+     let S:{string:Uint64}={"facebook":1,"instagram":3,"youtube":2,"reddit":5,"linkedin":4}
+     }
+     
+  
+  
+
+  3.
+     force unwrap operator (!) unwraps an optional type by saying :"if this nil,panic! if it's not nil we're fine, but get rid of optional type".
+       for example;
+                          Pub fun main(): String {
+                          Let example: {Int: String} = {5: “bmw”, 20: “audi”, 30: “merceds"}
+                          Return example[5]!   //The value “bmw” is no longer an optional type. It now becomes the type string and we won’t have any errors in compilation.
+}
+
+4.
+  We are getting the error because of a mismatch in the declared return type of the function and the returned type that is actually being returned. 
+ We can fix it using the force-unwrap operator.
+ 
+
+## chapter 2 day 4
+
+1,2 & 3:
+                 pub contract travel {
+
+    pub var traveldocs: {string: travelplan}
+    
+    pub struct travelplan {
+        pub let traveller: String
+        pub let destination: String
+        pub let duration_in_days: int
+        pub let budget: int
+
+        
+        init(_traveller: String, _destination: String, _duration_in_days: int, _budget: int) {
+            self.traveller = _string
+            self.destination = _string
+            self.duration_in_days = _int
+            self.budget = _int
+        }
+    }
+
+    pub fun addtraveller(traveller: String, destination: String, duration_in_days: int, budget: int) {
+        let newtraveller = travelplan(_traveller: traveller, _destination: destination, _duration_in_days: duration_in_days, _budget: budget)
+        self.traveldocs[traveller] = newtraveller
+    }
+
+    init() {
+        self.traveldocs = {}
+    }
+
+}
+
+
+ 4.
+        import travel from 0x01
+
+transaction(traveller: String, destination: String, duration_in_daysy: int, budget: int) {
+
+    prepare(signer: AuthAccount) {}
+
+    execute {
+        travel.addtraveller(traveller: traveller, festination: destination, duration_in_days: duration_in_days, budget: budget)
+        log("We're done.")
+    }
+}
+
+ 5.
+   import travel from 0x01
+
+pub fun main(traveller: string): travel.traveller {
+    return travel.traveldocs[travel]
+}
 
 
 
