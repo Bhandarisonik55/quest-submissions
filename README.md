@@ -34,15 +34,14 @@ pub contract jacobtucker {
         self.is = "the best!"
     }
 }
-   ```
+   
 
-2.     ```cadence 
+2.     
 import jacobtucker from 0x03
 
 pub fun main(): String {
     return jacobtucker.is
 }
-```
 
 ## chapter 2 day 2 quest
 
@@ -60,7 +59,7 @@ pub fun main(): String {
 
 
 4.    
-```cadence
+
 pub contract jacobtucker {
 
    //account templete//
@@ -95,35 +94,35 @@ pub contract jacobtucker {
     jacobtucker.updatemynumber(newnumber: mynewnumber)
   }
 }
-```
+
 
 
 ## chapter 2 day 3 quest
 
-1.```cadence
+1.
    pub fun main(): int{
     var S:[string]=["mom","dad","brother"]
     log(S)
     return 1
     }
-    ```
+    
 
-2.   ```cadence
+2.   
     pub fun main(){
      let S:{string:Uint64}={"facebook":1,"instagram":3,"youtube":2,"reddit":5,"linkedin":4}
      }
-     ```
+    
   
   
 
-  3.   ```cadence
+  3.   
      force unwrap operator (!) unwraps an optional type by saying :"if this nil,panic! if it's not nil we're fine, but get rid of optional type".
        for example;
                           Pub fun main(): String {
                           Let example: {Int: String} = {5: “bmw”, 20: “audi”, 30: “merceds"}
                           Return example[5]!   //The value “bmw” is no longer an optional type. It now becomes the type string and we won’t have any errors in compilation.
 }
- ``` 
+ 
 
 4.
   We are getting the error because of a mismatch in the declared return type of the function and the returned type that is actually being returned. 
@@ -132,7 +131,7 @@ pub contract jacobtucker {
 
 ## chapter 2 day 4 quest
 
-1,2 & 3: ```cadence
+1,2 & 3: 
                  pub contract travel {
 
     pub var traveldocs: {string: travelplan}
@@ -162,10 +161,10 @@ pub contract jacobtucker {
     }
 
 }
-```
 
 
- 4.   ```cadence
+
+ 4.   
         import travel from 0x01
 
 transaction(traveller: String, destination: String, duration_in_daysy: int, budget: int) {
@@ -177,9 +176,9 @@ transaction(traveller: String, destination: String, duration_in_daysy: int, budg
         log("We're done.")
     }
 }
-```
 
- 5.  ```cadence
+
+ 5.  
    import travel from 0x01
 
 pub fun main(traveller: string): travel.traveller {
