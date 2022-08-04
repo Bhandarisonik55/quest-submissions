@@ -25,15 +25,14 @@ Here are some answers;
 ## chapter 2 day 1 quest
 
 1.  
-```cadence
 pub contract jacobtucker {
 
-    pub let is: String
+   pub let is: String
 
-    init() {
+   init() {
         self.is = "the best!"
     }
-}```
+}
    
 
 2.     
@@ -66,11 +65,11 @@ pub contract jacobtucker {
     pub let is: string
     pub var mynumber: int
 
-    pub fun updatemynumber(newnumber: int) {
+   pub fun updatemynumber(newnumber: int) {
         self.mynumber = newnumber
     }
 
-    init() {
+  init() {
         self.is = "the best"
         self.mynuber =0
     }
@@ -134,16 +133,16 @@ pub contract jacobtucker {
 1,2 & 3: 
                  pub contract travel {
 
-    pub var traveldocs: {string: travelplan}
+   pub var traveldocs: {string: travelplan}
     
-    pub struct travelplan {
+   pub struct travelplan {
         pub let traveller: String
         pub let destination: String
         pub let duration_in_days: int
         pub let budget: int
 
         
-        init(_traveller: String, _destination: String, _duration_in_days: int, _budget: int) {
+  init(_traveller: String, _destination: String, _duration_in_days: int, _budget: int) {
             self.traveller = _string
             self.destination = _string
             self.duration_in_days = _int
@@ -151,12 +150,12 @@ pub contract jacobtucker {
         }
     }
 
-    pub fun addtraveller(traveller: String, destination: String, duration_in_days: int, budget: int) {
+   pub fun addtraveller(traveller: String, destination: String, duration_in_days: int, budget: int) {
         let newtraveller = travelplan(_traveller: traveller, _destination: destination, _duration_in_days: duration_in_days, _budget: budget)
         self.traveldocs[traveller] = newtraveller
     }
 
-    init() {
+   init() {
         self.traveldocs = {}
     }
 
@@ -169,9 +168,9 @@ pub contract jacobtucker {
 
 transaction(traveller: String, destination: String, duration_in_daysy: int, budget: int) {
 
-    prepare(signer: AuthAccount) {}
+   prepare(signer: AuthAccount) {}
 
-    execute {
+   execute {
         travel.addtraveller(traveller: traveller, festination: destination, duration_in_days: duration_in_days, budget: budget)
         log("We're done.")
     }
