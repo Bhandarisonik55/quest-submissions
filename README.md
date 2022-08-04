@@ -12,3 +12,73 @@ Here are some answers;
      
      
 ## chapter 2 day 2 quest
+
+1. 5 cadence language pillars are;
+      a. Saftey and Security: Because of its insanely strong type system, separation between contracts and transactions, and Resource Oriented Programming cadence maintains highest level of saftey and security.
+      b. Clarity: Making the code declarative and allowing the developer to express their intentions directly cadence makes code easy to read, especially Smart Contract code so that we, as users, can verify it is safe.
+      c. Approachability: Cadence is written is very familiar to other programming languages, making it easy to transition to if you have prior experience.
+      d. Developer Experience: Cadence makes error message very clear so that developer donot gets frustated.
+      e. Resource Oriented Programming
+      
+2. Because it consist of all the requirements of a safe and trustworthy program as listed on the pillars.
+
+## chapter 2 day 1
+
+1.   pub contract jacobtucker {
+
+    pub let is: String
+
+    init() {
+        self.is = "the best!"
+    }
+}
+
+2.     import jacobtucker from 0x03
+
+pub fun main(): String {
+    return jacobtucker.is
+}
+
+## chapter 2 day 2
+## chapter 2 day 4
+
+4.    pub contract jacobtucker {
+
+   //account templete
+    pub let is: string
+    pub var mynumber: int
+
+    pub fun updatemynumber(newnumber: int) {
+        self.mynumber = newnumber
+    }
+
+    init() {
+        self.is = "the best"
+        self.mynuber =0
+    }
+}
+
+//Script template
+  import jacobtucker from 0x03
+  
+  pub fun main(): int{
+      return jacobtucker.mynumber
+  }
+  
+  // transaction template
+  
+  import jacobtucker from 0x03
+  transaction(mynewnumber: int) {
+
+  prepare(acct: AuthAccount) {}
+
+  execute {
+    jacobtucker.updatemynumber(newnumber: mynewnumber)
+  }
+}
+
+
+## chapter 2 day 3
+
+
+
