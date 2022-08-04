@@ -36,7 +36,8 @@ pub contract jacobtucker {
 }
    ```
 
-2.     ```cadence import jacobtucker from 0x03
+2.     ```cadence 
+import jacobtucker from 0x03
 
 pub fun main(): String {
     return jacobtucker.is
